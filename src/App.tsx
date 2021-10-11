@@ -1,9 +1,9 @@
-import CountDown from "./components/CountDown";
+import Front from "./pages/Front";
 
 const App = () => {
   return (
     <div>
-      <CountDown />
+      <Front />
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Card from "../Card";
+import * as S from "./styles";
 
 const SECONDS = 1000;
 const MINUTES = SECONDS * 60;
@@ -28,12 +29,24 @@ const CountDown = () => {
   }, [countDownDate]);
 
   return (
-    <div>
-      <Card>{days}</Card>
-      <Card>{hours}</Card>
-      <Card>{minutes}</Card>
-      <Card>{seconds}</Card>
-    </div>
+    <S.Container>
+      <S.CardWrapper>
+        <Card>{days}</Card>
+        <S.Label>Days</S.Label>
+      </S.CardWrapper>
+      <S.CardWrapper>
+        <Card>{hours}</Card>
+        <S.Label>Hours</S.Label>
+      </S.CardWrapper>
+      <S.CardWrapper>
+        <Card>{minutes}</Card>
+        <S.Label>Minutes</S.Label>
+      </S.CardWrapper>
+      <S.CardWrapper>
+        <Card>{seconds}</Card>
+        <S.Label>Seconds</S.Label>
+      </S.CardWrapper>
+    </S.Container>
   );
 };
 
