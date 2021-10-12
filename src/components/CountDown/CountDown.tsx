@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import Card from "../Card";
+// import Card from "../Card";
+import FlipClock from "../FlipClock";
 import * as S from "./styles";
 
 const SECONDS = 1000;
@@ -30,22 +31,12 @@ const CountDown = () => {
 
   return (
     <S.Container>
-      <S.CardWrapper>
-        <Card number={days} />
-        <S.Label>Days</S.Label>
-      </S.CardWrapper>
-      <S.CardWrapper>
-        <Card number={hours} />
-        <S.Label>Hours</S.Label>
-      </S.CardWrapper>
-      <S.CardWrapper>
-        <Card number={minutes} />
-        <S.Label>Minutes</S.Label>
-      </S.CardWrapper>
-      <S.CardWrapper>
-        <Card number={seconds} />
-        <S.Label>Seconds</S.Label>
-      </S.CardWrapper>
+      <FlipClock
+        days={days}
+        hours={hours}
+        minutes={minutes}
+        seconds={seconds}
+      />
     </S.Container>
   );
 };
