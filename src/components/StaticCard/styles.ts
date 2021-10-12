@@ -3,17 +3,17 @@ import { rem } from "../../styles/utils";
 
 export const StaticCard = styled.div<{ $position: string }>`
   width: 100%;
-  height: 50%;
   display: flex;
   justify-content: center;
 
   position: relative;
-  z-index: 5;
+  z-index: 10;
   overflow: hidden;
 
   ${({ $position }) =>
     $position === "upper" &&
     css`
+      align-items: flex-end;
       border-top-left-radius: ${rem(8)};
       border-top-right-radius: ${rem(8)};
       background-color: rgb(0, 0, 0, 0.15);
@@ -21,6 +21,7 @@ export const StaticCard = styled.div<{ $position: string }>`
   ${({ $position }) =>
     $position === "lower" &&
     css`
+      align-items: flex-start;
       border-bottom-left-radius: ${rem(8)};
       border-bottom-right-radius: ${rem(8)};
     `}

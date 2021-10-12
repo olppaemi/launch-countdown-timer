@@ -1,4 +1,4 @@
-import FlipClockUnit from "../FlipClockUnit";
+import FlipCard from "../FlipCard";
 import * as S from "./styles";
 
 const FlipClock = ({
@@ -14,10 +14,10 @@ const FlipClock = ({
 }) => {
   return (
     <S.FlipClock>
-      <FlipClockUnit number={days} unit={"days"} />
-      <FlipClockUnit number={hours} unit={"hours"} />
-      <FlipClockUnit number={minutes} unit={"minutes"} />
-      <FlipClockUnit number={seconds} unit={"seconds"} />
+      <FlipCard number={days} unit={"days"} />
+      <FlipCard number={hours} unit={"hours"} />
+      <FlipCard number={minutes} unit={"minutes"} />
+      <FlipCard number={seconds} unit={"seconds"} />
     </S.FlipClock>
   );
 };

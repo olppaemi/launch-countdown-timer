@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { media } from "../../styles/media";
 import { rem } from "../../styles/utils";
 
 export const FlipClock = styled.div`
@@ -6,4 +7,8 @@ export const FlipClock = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: ${rem(32)};
+
+  @media (max-width: ${media.md}) {
+    grid-column-gap: ${rem(16)};
+  }
 `;

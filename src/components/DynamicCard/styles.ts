@@ -3,7 +3,6 @@ import { rem } from "../../styles/utils";
 
 export const DynamicCard = styled.div<{ $animation: string }>`
   width: 100%;
-  height: 50%;
 
   display: flex;
   justify-content: center;
@@ -13,13 +12,14 @@ export const DynamicCard = styled.div<{ $animation: string }>`
 
   position: absolute;
   left: 0;
-  z-index: 10;
+  z-index: 100;
   overflow: hidden;
 
   ${({ $animation }) =>
     $animation === "unfold" &&
     css`
       top: 50%;
+      align-items: flex-end;
 
       border-bottom-left-radius: ${rem(8)};
       border-bottom-right-radius: ${rem(8)};
@@ -33,6 +33,7 @@ export const DynamicCard = styled.div<{ $animation: string }>`
     $animation === "fold" &&
     css`
       top: 0%;
+      align-items: flex-start;
 
       border-top-left-radius: ${rem(8)};
       border-top-right-radius: ${rem(8)};

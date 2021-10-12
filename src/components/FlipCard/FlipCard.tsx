@@ -25,18 +25,22 @@ const FlipClockUnit = ({ number, unit }: { number: number; unit: string }) => {
   const number1 = swap ? previousNumber : currentNumber;
   const number2 = !swap ? previousNumber : currentNumber;
 
-  // swap animations
   const animation1 = swap ? "fold" : "unfold";
   const animation2 = !swap ? "fold" : "unfold";
 
   return (
     <S.Container>
-      <S.FlipClockUnit>
-        <StaticCard position={"upper"} number={currentNumber} />
-        <StaticCard position={"lower"} number={previousNumber} />
-        <DynamicCard number={number1} animation={animation1} />
-        <DynamicCard number={number2} animation={animation2} />
-      </S.FlipClockUnit>
+      <S.Wrapper>
+        <S.FlipClockUnit>
+          <StaticCard position={"upper"} number={currentNumber} />
+          <StaticCard position={"lower"} number={previousNumber} />
+          <DynamicCard number={number1} animation={animation1} />
+          <DynamicCard number={number2} animation={animation2} />
+          <S.LeftHole />
+          <S.RightHole />
+          <S.MiddleBar />
+        </S.FlipClockUnit>
+      </S.Wrapper>
     </S.Container>
   );
 };

@@ -4,13 +4,9 @@ import { rem } from "../../styles/utils";
 
 export const Container = styled.div`
   width: ${rem(688)};
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-column-gap: ${rem(32)}; */
 
   @media (max-width: ${media.md}) {
     width: ${(327 / 375) * 100}%;
-    /* grid-column-gap: ${rem(16)}; */
   }
 `;
 
