@@ -7,14 +7,43 @@ export const Container = styled.div`
   font-weight: bold;
   letter-spacing: -${rem(2.4)};
   color: ${({ theme }) => theme.palette.softRed};
-  background-color: ${({ theme }) => theme.palette.veryBlackBlue};
+
   border-radius: ${rem(8)};
 
   position: relative;
   width: 100%;
+
+  display: flex;
+  flex-direction: column;
 `;
 
-export const Wrapper = styled.div``;
+export const Wrapper = styled.div`
+  width: 100%;
+  background-color: ${({ theme }) => theme.palette.veryBlackBlue};
+  border-radius: ${rem(8)};
+  margin-bottom: ${rem(16)};
+`;
+
+export const Dummy = styled.div`
+  height: ${rem(10)};
+
+  @media (max-width: ${media.sm}) {
+    height: ${rem(4.29)};
+  }
+`;
+
+export const Unit = styled.p`
+  font-size: ${rem(14)};
+  text-transform: uppercase;
+  text-align: center;
+  color: ${({ theme }) => theme.palette.grayishBlue};
+  letter-spacing: ${rem(5.92)};
+
+  @media (max-width: ${media.sm}) {
+    font-size: ${rem(7)};
+    letter-spacing: ${rem(2.96)};
+  }
+`;
 
 export const FlipClockUnit = styled.div`
   width: 100%;

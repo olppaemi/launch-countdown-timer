@@ -40,7 +40,9 @@ const FlipClockUnit = ({ number, unit }: { number: number; unit: string }) => {
           <S.RightHole />
           <S.MiddleBar />
         </S.FlipClockUnit>
+        <S.Dummy />
       </S.Wrapper>
+      <S.Unit>{unit}</S.Unit>
     </S.Container>
   );
 };
