@@ -10,10 +10,10 @@ const DAYS = HOURS * 24;
 const CountDown = () => {
   const countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
 
-  const [days, setDays] = useState<number>();
-  const [hours, setHours] = useState<number>();
-  const [minutes, setMinutes] = useState<number>();
-  const [seconds, setSeconds] = useState<number>();
+  const [days, setDays] = useState<number>(0);
+  const [hours, setHours] = useState<number>(0);
+  const [minutes, setMinutes] = useState<number>(0);
+  const [seconds, setSeconds] = useState<number>(0);
 
   // https://www.w3schools.com/howto/howto_js_countdown.asp
   useEffect(() => {
@@ -31,19 +31,19 @@ const CountDown = () => {
   return (
     <S.Container>
       <S.CardWrapper>
-        <Card>{days}</Card>
+        <Card number={days} />
         <S.Label>Days</S.Label>
       </S.CardWrapper>
       <S.CardWrapper>
-        <Card>{hours}</Card>
+        <Card number={hours} />
         <S.Label>Hours</S.Label>
       </S.CardWrapper>
       <S.CardWrapper>
-        <Card>{minutes}</Card>
+        <Card number={minutes} />
         <S.Label>Minutes</S.Label>
       </S.CardWrapper>
       <S.CardWrapper>
-        <Card>{seconds}</Card>
+        <Card number={seconds} />
         <S.Label>Seconds</S.Label>
       </S.CardWrapper>
     </S.Container>

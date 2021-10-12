@@ -4,17 +4,25 @@ import { rem } from "../../styles/utils";
 
 export const Container = styled.div`
   width: ${rem(688)};
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: ${rem(32)};
 
   @media (max-width: ${media.md}) {
-    width: ${rem(327)};
+    width: ${(327 / 375) * 100}%;
+    grid-column-gap: ${rem(16)};
   }
 `;
 
 export const CardWrapper = styled.div`
   & > * + * {
     margin-top: ${rem(16)};
+  }
+
+  @media (max-width: ${media.md}) {
+    & > * + * {
+      margin-top: ${rem(9)};
+    }
   }
 `;
 
